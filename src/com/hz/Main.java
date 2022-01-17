@@ -10,6 +10,7 @@ public class Main {
 
         // Ask user which game to play
         String q1 = "Do you want to play Chess [1] or Checkers [2]?";
+        String q2 = "Do you want to play Normal checkers [3] or Speed checkers [4]?";
 
         writer.write(q1);
 
@@ -21,6 +22,7 @@ public class Main {
         } else {
             gameSetupCreator = new CheckersSetupCreator();
         }
+
 
         // Board
 

@@ -1,9 +1,18 @@
 package com.hz;
 
+import java.awt.*;
+import java.util.Arrays;
+import java.util.List;
+
 public class ChessSetupCreator extends GameSetupCreator {
     @Override
     Pawns[] getPawns() {
-        return new Pawns[16 * 2];
+        int numberOfPawns = 32;
+        System.out.println("selected chess");
+        List[] pawnAndColor = Colors.getColor(numberOfPawns);
+        System.out.println(Arrays.toString(pawnAndColor));
+
+        return new Pawns[numberOfPawns];
     }
 
     @Override
