@@ -1,19 +1,18 @@
 package com.hz;
 
-public class ChessSetupCreator extends GameSetupCreator{
-
-    @override
+public class ChessSetupCreator extends GameSetupCreator {
+    @Override
     Pawns[] getPawns() {
-        return new Panws[16 * 2];
+        return new Pawns[16 * 2];
     }
 
-    @override
+    @Override
     Rules[] getRules() {
         return new Rules[0];
     }
 
-    @override
-    Board[] getBoard() {
+    @Override
+    Board getBoard() {
         return new ChessBoard();
     }
 }

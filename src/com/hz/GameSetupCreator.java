@@ -1,6 +1,6 @@
 package com.hz;
 
-public class GameSetupCreator {
+public abstract class GameSetupCreator {
 
     abstract Pawns[] getPawns();
 
