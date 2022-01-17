@@ -3,7 +3,7 @@ package com.hz;
 public class CheckersSetupCreator extends GameSetupCreator{
     @override
     Pawns[] getPawns() {
-        return new Panws[0];
+        return new Pawns[20 * 2];
     }
 
     @override
