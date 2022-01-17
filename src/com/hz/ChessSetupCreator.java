@@ -4,7 +4,7 @@ public class ChessSetupCreator extends GameSetupCreator{
 
     @override
     Pawns[] getPawns() {
-        return new Panws[0];
+        return new Panws[16 * 2];
     }
 
     @override

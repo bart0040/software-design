@@ -13,14 +13,27 @@ public class Main {
 
         writer.write(q1);
 
-        // Board
-        Board board = null;
+        GameSetupCreator gameSetupCreator;
         String choice = reader.readLine();
 
         if(choice.equals("1")) {
-            board = new ChessBoard();
+            gameSetupCreator = new ChessSetupCreator();
         } else {
-            board = new CheckersBoard();
+            gameSetupCreator = new CheckersSetupCreator();
         }
+
+        // Board
+
+        gameSetupCreator.getBoard();
+
+        // Pawns
+
+        gameSetupCreator.getPawns();
+
+        // Rules: allowed moves, time constrains.
+
+        // Two players
+
+        // play mode: turns
     }
 }
