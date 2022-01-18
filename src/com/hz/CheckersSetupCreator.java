@@ -6,7 +6,7 @@ import java.util.List;
 public class CheckersSetupCreator extends GameSetupCreator{
     @Override
     Pawns[] getPawns() {
-        int numberOfPawns = 20;
+        int numberOfPawns = 40;
         System.out.println("The pawns:");
         List[] pawnAndColor = Colors.getColor(numberOfPawns);
         System.out.println(Arrays.toString(pawnAndColor));
