@@ -1,5 +1,7 @@
 package com.hz;
 
+import java.lang.constant.Constable;
+
 public class Main {
 
     public static void main(String[] args) {
@@ -22,7 +24,6 @@ public class Main {
         } else {
             gameSetupCreator = new CheckersSetupCreator();
         }
-
 
         // Board
 

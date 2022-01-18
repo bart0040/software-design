@@ -1,9 +1,17 @@
 package com.hz;
 
+import java.util.Arrays;
+import java.util.List;
+
 public class CheckersSetupCreator extends GameSetupCreator{
     @Override
     Pawns[] getPawns() {
-        return new Pawns[20 * 2];
+        int numberOfPawns = 20;
+        System.out.println("The pawns:");
+        List[] pawnAndColor = Colors.getColor(numberOfPawns);
+        System.out.println(Arrays.toString(pawnAndColor));
+
+        return new Pawns[numberOfPawns];
     }
 
     @Override
@@ -13,6 +21,11 @@ public class CheckersSetupCreator extends GameSetupCreator{
 
     @Override
     Board getBoard() {
+        System.out.println("Selected checkers");
+        System.out.println("The squares:");
+        int numberOfSquares = 100;
+        List[] squareAndColor = Colors.getColor(numberOfSquares);
+        System.out.println(Arrays.toString(squareAndColor));
         return new CheckersBoard();
     }
 }

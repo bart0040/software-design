@@ -8,7 +8,7 @@ public class ChessSetupCreator extends GameSetupCreator {
     @Override
     Pawns[] getPawns() {
         int numberOfPawns = 32;
-        System.out.println("selected chess");
+        System.out.println("The pawns:");
         List[] pawnAndColor = Colors.getColor(numberOfPawns);
         System.out.println(Arrays.toString(pawnAndColor));
 
@@ -22,6 +22,11 @@ public class ChessSetupCreator extends GameSetupCreator {
 
     @Override
     Board getBoard() {
+        System.out.println("Selected chess");
+        System.out.println("The squares:");
+        int numberOfSquares = 64;
+        List[] squareAndColor = Colors.getColor(numberOfSquares);
+        System.out.println(Arrays.toString(squareAndColor));
         return new ChessBoard();
     }
 }
