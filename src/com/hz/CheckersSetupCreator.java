@@ -7,9 +7,8 @@ import java.util.List;
 public class CheckersSetupCreator extends GameSetupCreator{
     @Override
     Pawn[] getPawns() {
-        int numberOfPawns = 20;
-        System.out.println("The pawns:");
 
+        System.out.println("The pawns:");
         List<Pawn> whitePawns = getPawnsSub(new White());
         List<Pawn> blackPawns = getPawnsSub(new Black());
 
@@ -24,8 +23,9 @@ public class CheckersSetupCreator extends GameSetupCreator{
         }
     }
     private List<Pawn> getPawnsSub(Color color){
+        int numberOfPawnsPerColor = 20;
         List<Pawn> pawns = new ArrayList<>();
-        for (int i = 1; i <= 20; i++) {
+        for (int i = 1; i <= numberOfPawnsPerColor; i++) {
             Pawn pawn = new Pawn();
             pawn.setColor(color);
             pawn.setPos(i);
@@ -33,6 +33,7 @@ public class CheckersSetupCreator extends GameSetupCreator{
         }
         return pawns;
     }
+
     @Override
     Rules[] getRules() {
         return new Rules[0];
