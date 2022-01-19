@@ -13,8 +13,8 @@
 - White.java
 - Black.java 
 - Pawn.java
-<br>In combination with CheckersSetupCreator and both the ChessSetupCreator and the CheckersSetupCreator.
-<br>The structural design for a bridge is logical because both the pawns and both the squares of the board, need black and white. So they both get there colors from these classes.
+<br>In combination with CheckersSetupCreator and both the ChessSetupCreator and the CheckersSetupCreator. In this bridge there is a link between the Pawn and the color.
+<br>The structural design for a bridge is logical because pawns need black and white. So now they get the color from these classes.
 
 ## Behavioral design:
 ### State:
