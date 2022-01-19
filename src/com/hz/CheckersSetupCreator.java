@@ -1,19 +1,38 @@
 package com.hz;
 
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
 public class CheckersSetupCreator extends GameSetupCreator{
     @Override
-    Pawns[] getPawns() {
-        int numberOfPawns = 40;
+    Pawn[] getPawns() {
+        int numberOfPawns = 20;
         System.out.println("The pawns:");
-        List[] pawnAndColor = Colors.getColor(numberOfPawns);
-        System.out.println(Arrays.toString(pawnAndColor));
 
-        return new Pawns[numberOfPawns];
+        List<Pawn> whitePawns = getPawnsSub(new White());
+        List<Pawn> blackPawns = getPawnsSub(new Black());
+
+        showPawns(whitePawns);
+        showPawns(blackPawns);
+
+        return new Pawn[0];
     }
-
+    private void showPawns(List<Pawn> pawns){
+        for (Pawn pawn:pawns) {
+            System.out.println(pawn.show());
+        }
+    }
+    private List<Pawn> getPawnsSub(Color color){
+        List<Pawn> pawns = new ArrayList<>();
+        for (int i = 1; i <= 20; i++) {
+            Pawn pawn = new Pawn();
+            pawn.setColor(color);
+            pawn.setPos(i);
+            pawns.add(pawn);
+        }
+        return pawns;
+    }
     @Override
     Rules[] getRules() {
         return new Rules[0];
@@ -22,10 +41,6 @@ public class CheckersSetupCreator extends GameSetupCreator{
     @Override
     Board getBoard() {
         System.out.println("Selected checkers");
-        System.out.println("The squares:");
-        int numberOfSquares = 100;
-        List[] squareAndColor = Colors.getColor(numberOfSquares);
-        System.out.println(Arrays.toString(squareAndColor));
         return new CheckersBoard();
     }
 }

@@ -2,7 +2,7 @@ package com.hz;
 
 public abstract class GameSetupCreator {
 
-    abstract Pawns[] getPawns();
+    abstract Pawn[] getPawns();
 
     abstract Rules[] getRules();
 

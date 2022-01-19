@@ -2,8 +2,8 @@ package com.hz;
 
 import java.lang.constant.Constable;
 
-public class White extends Colors {
-    public static Constable getColor(){
+public class White implements Color {
+    public String getColor(){
         return "White";
     }
 }

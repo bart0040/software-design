@@ -9,7 +9,7 @@
 ## Structural design:
 ### Bridge:
 #### The classes named here are part of the bridge structure:
-- Colors.java
+- Color.java
 - White.java
 - Black.java 
 <br>In combination with CheckersSetupCreator and both the ChessSetupCreator and the CheckersSetupCreator.
